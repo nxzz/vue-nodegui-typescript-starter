@@ -2,6 +2,8 @@
   "compilerOptions": {
     "target": "esnext",
     "module": "commonjs",
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "typeRoots": ["src/types"],
+    "types": ["node"]
   }
 }
