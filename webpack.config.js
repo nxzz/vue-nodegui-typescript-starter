@@ -1,11 +1,11 @@
 const path = require('path');
-const { VueLoaderPlugin } = require('vue-loader');
+const { VueLoaderPlugin } = require('vue-loader')
 const { compilerOptions } = require('@nodegui/vue-nodegui/dist/vueLoader');
 
 module.exports = (env = {}) => ({
   mode: env.prod ? 'production' : 'development',
   devtool: 'inline-source-map',
-  entry: path.resolve(__dirname, './main.js'),
+  entry: path.resolve(__dirname, './src/main.ts'),
   target: 'node',
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -19,6 +19,15 @@ module.exports = (env = {}) => ({
   },
   module: {
     rules: [
+      {
+        test: /\.ts$/,
+        use: [{
+          loader: 'ts-loader',
+          options: {
+            appendTsSuffixTo: [/\.vue$/]
+          }
+        }]
+      },
       {
         test: /\.vue$/,
         use: {
