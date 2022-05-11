@@ -1,4 +1,6 @@
-vue-nodegui-starter
+vue-nodegui-typescript-starter
+
+vue-nodegui-starter(https://github.com/nodegui/vue-nodegui-starter) fork.
 
 Clone and run for a quick way to see Vue NodeGui in action.
 ![demo image](/assets/demo.png)
@@ -9,11 +11,11 @@ To clone and run this repository you'll need [Git](https://git-scm.com/) and [No
 
 ```shell
 # Clone this repository
-git clone https://github.com/nodegui/vue-nodegui-starter
+git clone https://github.com/nxzz/vue-nodegui-typescript-starter
 # Install CMake
 brew install cmake
 # Go into the repository
-cd vue-nodegui-starter
+cd vue-nodegui-typescript-starter
 # Install dependencies
 npm install
 # Run the app
@@ -31,32 +33,11 @@ npm run dev
 
 In order to distribute your finished app, you can use [@nodegui/packer](https://github.com/nodegui/packer)
 
-### Step 1: (_**Run this command only once**_)
+### Build for Windows 
 
 ```sh
-npx nodegui-packer --init MyAppName
+npm run build:win
 ```
-
-This will produce the deploy directory containing the template. You can modify this to suite your needs. Like add icons, change the name, description and add other native features or dependencies. Make sure you commit this directory.
-
-### Step 2: (_**Run this command every time you want to build a new distributable**_)
-
-Next you can run the pack command:
-
-```sh
-npm run build
-```
-
-This will produce the js bundle along with assets inside the `./dist` directory
-
-```sh
-npx nodegui-packer --pack ./dist
-```
-
-This will build the distributable using @nodegui/packer based on your template. The output of the command is found under the build directory. You should gitignore the build directory.
-
-More details about packer can be found here: https://github.com/nodegui/packer
-
 ## License
 
 MIT

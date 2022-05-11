@@ -4,7 +4,8 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack && qode --inspect ./dist/main.js"
+    "dev": "webpack && qode --inspect ./dist/main.js",
+    "build:win": "rimraf dist && webpack && npx nodegui-packer --pack ./dist"
   },
   "dependencies": {
     "@nodegui/vue-nodegui": "0.0.3",
@@ -23,6 +24,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "rimraf": "^2.7.1",
+    "@nodegui/packer": "^1.5.0",
     "ts-loader": "^9.3.0",
     "typescript": "^4.6.4"
   }
