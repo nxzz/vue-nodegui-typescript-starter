@@ -4,8 +4,10 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "dev": "webpack && qode --inspect ./dist/main.js",
-    "build:win": "rimraf dist && webpack && npx nodegui-packer --pack ./dist"
+    "dev": "webpack && qode --inspect ./dist/index.js",
+    "initialize": "nodegui-packer --init App",
+    "build:win": "rimraf dist && webpack && nodegui-packer --pack ./dist",
+    "build:mac": "sh mac_build"
   },
   "dependencies": {
     "@nodegui/vue-nodegui": "0.0.3",

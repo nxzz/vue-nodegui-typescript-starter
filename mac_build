@@ -1,0 +1,11 @@
+#!/bin/bash
+cd "`dirname "$0"`"
+
+rm -rf dist
+npx webpack
+rm -rf deploy/darwin/build
+mkdir -p deploy/darwin/build
+cp -r deploy/darwin/App.app deploy/darwin/build/App.app
+mkdir -p dist/ deploy/darwin/build/App.app/Contents/Resources/dist
+cp -r dist/ deploy/darwin/build/App.app/Contents/Resources/dist
+cp node_modules/@nodegui/qode/binaries/qode deploy/darwin/build/App.app/Contents/MacOS/

@@ -26,4 +26,4 @@ demo-dist
 
 # End of https://www.gitignore.io/api/vue
 
-deploy/win32/build
+deploy/**/build
