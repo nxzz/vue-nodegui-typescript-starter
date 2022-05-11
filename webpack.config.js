@@ -9,7 +9,7 @@ module.exports = (env = {}) => ({
   target: 'node',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    publicPath: '',
     filename: 'index.js'
   },
   resolve: {
@@ -40,7 +40,7 @@ module.exports = (env = {}) => ({
       },
       {
         test: /\.node$/,
-        use: [{ loader: 'node-loader' }, { loader: 'file-loader' }],
+        use: [{ loader: 'node-loader' }],
       },
       {
         test: /\.(png|jpe?g|gif|svg|bmp)$/i,
