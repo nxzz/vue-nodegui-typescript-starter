@@ -5,11 +5,12 @@ const { compilerOptions } = require('@nodegui/vue-nodegui/dist/vueLoader');
 module.exports = (env = {}) => ({
   mode: env.prod ? 'production' : 'development',
   devtool: 'inline-source-map',
-  entry: path.resolve(__dirname, './src/main.ts'),
+  entry: path.resolve(__dirname, './src/index.ts'),
   target: 'node',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
+    filename: 'index.js'
   },
   resolve: {
     extensions: ['.ts', '.js', '.vue', '.json'],
